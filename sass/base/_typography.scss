@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Starkey;
+  src: url(../fonts/Starkey.ttf);
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 2rem;
+}
+
+.heading-primary {
+  color: $color-white;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+
+  &--main {
+    text-align: center;
+    font-family: "Starkey";
+    color: $color-white;
+    /* background: -webkit-linear-gradient(#881189, black);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; */
+    display: block;
+    font-size: 14rem;
+    font-weight: 400;
+    /* letter-spacing: 25px; */
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+  }
+
+  &--sub {
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1rem;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+  }
+}
