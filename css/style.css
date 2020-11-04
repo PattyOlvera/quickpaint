@@ -167,6 +167,24 @@ body {
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #9b4980, #045f6b);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -217,3 +235,13 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
+
+.section-features {
+  margin-top: 20rem;
+  padding: 20rem 0;
+  background-image: linear-gradient(to right, rgba(170, 211, 224, 0.8), rgba(4, 95, 107, 0.8)), url(../img/paint_4.jpg);
+  background-size: cover;
+  background-position: top;
+  transform: skewY(-6.5deg); }
+  .section-features > * {
+    transform: skewY(6.5deg); }
