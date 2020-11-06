@@ -140,6 +140,99 @@ body {
   box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 60rem; }
+  .card__side {
+    height: 60rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #0808a3, #4897e0); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #f12711, #f5af19); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #aa076b, #61045f); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0deg); }
+  .card__picture {
+    background-size: cover;
+    height: 28rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__picture-1 {
+      background-image: url(../img/starry.jpg); }
+    .card__picture-2 {
+      background-image: url(../img/gato_matisse.jpg);
+      background-position: center; }
+    .card__picture-3 {
+      background-image: url(../img/mujer_con_libro.jpg); }
+  .card__heading {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 14rem;
+    right: 2rem; }
+  .card__heading--span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading--span-1 {
+      background-image: linear-gradient(to right bottom, rgba(8, 8, 163, 0.8), rgba(72, 151, 224, 0.8)); }
+    .card__heading--span-2 {
+      background-image: linear-gradient(to right bottom, rgba(241, 39, 17, 0.9), rgba(245, 175, 25, 0.9)); }
+    .card__heading--span-3 {
+      background-image: linear-gradient(to right bottom, rgba(170, 7, 107, 0.8), rgba(97, 4, 95, 0.8)); }
+  .card__details {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #bbbbbb; }
+  .card__title--kit {
+    font-size: 1.6rem; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    color: #fff;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.5rem; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
+
 .composition {
   position: relative; }
   .composition__photo {
@@ -216,6 +309,7 @@ body {
   background-image: linear-gradient(to right, rgba(170, 211, 224, 0.8), rgba(4, 95, 107, 0.8)), url(../img/paint_1.jpg);
   background-size: cover;
   background-position: top;
+  -webkit-clip-path: polygon(0 0%, 100% 0, 100% 85%, 0 100%);
   clip-path: polygon(0 0%, 100% 0, 100% 85%, 0 100%);
   position: relative; }
   .header__logo-box {
@@ -245,3 +339,8 @@ body {
   transform: skewY(-6.5deg); }
   .section-features > * {
     transform: skewY(6.5deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 1rem 0 50rem 0;
+  margin-top: -10rem; }
