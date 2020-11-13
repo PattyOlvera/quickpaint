@@ -253,7 +253,7 @@ body {
       left: 20%;
       top: 12rem; }
     .composition__photo:hover {
-      outline: 1.5rem solid #09adb6bb;
+      outline: 1.5rem solid #00ced1;
       transform: scale(1.05);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 20; }
@@ -306,7 +306,7 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right, rgba(170, 211, 224, 0.8), rgba(4, 95, 107, 0.8)), url(../img/paint_1.jpg);
+  background-image: linear-gradient(to right, rgba(91, 40, 150, 0.8), rgba(4, 95, 107, 0.8)), url(../img/paint_1.jpg);
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0%, 100% 0, 100% 85%, 0 100%);
@@ -317,7 +317,10 @@ body {
     top: 3rem;
     left: 3rem; }
   .header__logo {
-    height: 15rem; }
+    height: 8rem;
+    width: 12rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 100%; }
   .header__text-box {
     position: absolute;
     top: 50%;
@@ -333,7 +336,7 @@ body {
 .section-features {
   margin-top: 20rem;
   padding: 20rem 0;
-  background-image: linear-gradient(to right, rgba(170, 211, 224, 0.8), rgba(4, 95, 107, 0.8)), url(../img/paint_4.jpg);
+  background-image: linear-gradient(to right, rgba(91, 40, 150, 0.8), rgba(4, 95, 107, 0.8)), url(../img/paint_4.jpg);
   background-size: cover;
   background-position: top;
   transform: skewY(-6.5deg); }
