@@ -14,6 +14,11 @@
   }
 
   &__navigation {
+    border-top: 1px solid $color-white;
+    padding: 2rem;
+    display: inline-block;
+    width: 80%;
+    text-align: center;
   }
 
   &__list {
@@ -40,6 +45,15 @@
       color: $color-primary;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.5);
     }
+  }
+  &__copyright {
+    text-align: center;
+    color: $color-white;
+    border-top: 1px solid $color-white;
+    padding: 2rem;
+    display: inline-block;
+    width: 80%;
+    float: right;
   }
 }
 //
