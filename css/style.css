@@ -12,6 +12,9 @@ $breakpoint argument choices:
 -tab-land
 -big-desktop
 
+ORDER: Base + Typography > general layout + grid > page layout > components
+
+
 */
 @keyframes moveInLeft {
   0% {
@@ -42,21 +45,22 @@ $breakpoint argument choices:
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (min-width: 112.5em) {
     html {
-      font-size: 60%; } }
-  @media (max-width: 75em) {
-    html {
-      font-size: 70%; } }
-  @media (min-width: 112.5em) {
-    html {
-      font-size: 80%; } }
+      font-size: 75%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 @font-face {
   font-family: Starkey;
@@ -67,8 +71,7 @@ body {
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
-  color: #777;
-  padding: 2rem; }
+  color: #777; }
 
 .heading-primary {
   color: #fff;
@@ -83,9 +86,14 @@ body {
     display: block;
     font-size: 14rem;
     font-weight: 400;
+    letter-spacing: 3.5rem;
     /* letter-spacing: 25px; */
     animation-name: moveInLeft;
     animation-duration: 2s; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .heading-primary--sub {
     text-align: center;
     text-transform: uppercase;
@@ -95,6 +103,9 @@ body {
     letter-spacing: 1rem;
     animation-name: moveInRight;
     animation-duration: 2s; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: 0.5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -103,7 +114,14 @@ body {
   display: inline-block;
   background-image: linear-gradient(to right, #9b4980, #045f6b);
   -webkit-background-clip: text;
-  color: transparent; }
+  color: transparent;
+  letter-spacing: 0.2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -471,9 +489,16 @@ body {
   background-color: #045f6b;
   padding: 10rem 0;
   font-size: 1.4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .footer {
+      width: 100%;
+      text-align: center; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__logo-box {
+        margin-bottom: 6rem; } }
   .footer__logo {
     width: 30rem;
     height: auto; }
@@ -505,12 +530,23 @@ body {
     display: inline-block;
     width: 80%;
     float: right; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__copyright {
+        width: 100%;
+        float: none; } }
 
 .row {
   max-width: 114rem;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media only screen and (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
@@ -519,6 +555,13 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media only screen and (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -540,6 +583,9 @@ body {
   -webkit-clip-path: polygon(0 0%, 100% 0, 100% 85%, 0 100%);
   clip-path: polygon(0 0%, 100% 0, 100% 85%, 0 100%);
   position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      clip-path: polygon(0 0%, 100% 0, 100% 90%, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 3rem;
@@ -669,6 +715,9 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
+  @media only screen and (max-width: 56.25em) {
+    .section-about {
+      padding: 20rem 0; } }
 
 .section-features {
   margin-top: 20rem;
@@ -679,19 +728,31 @@ body {
   transform: skewY(-6.5deg); }
   .section-features > * {
     transform: skewY(6.5deg); }
+  @media only screen and (max-width: 56.25em) {
+    .section-features {
+      padding: 15rem 0; } }
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 1rem 0 15rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
+  @media only screen and (max-width: 56.25em) {
+    .section-tours {
+      padding: 20rem 0 10rem 0; } }
 
 .section-stories {
   position: relative;
   padding: 15rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    .section-stories {
+      padding: 10rem 0; } }
 
 .section-book {
   padding: 15rem 0;
   background-image: linear-gradient(to right, #5b2896, #00ced1); }
+  @media only screen and (max-width: 56.25em) {
+    .section-book {
+      padding: 20rem 0 10rem 0; } }
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../../img/booking.jpg);
