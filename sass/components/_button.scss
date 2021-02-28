@@ -36,6 +36,9 @@
     background-color: $color-primary;
     color: $color-white;
   }
+  &--text {
+    color: $color-secondary;
+  }
 }
 
 .btn-text {
