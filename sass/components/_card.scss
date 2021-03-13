@@ -49,7 +49,7 @@
   //Front side styling
   &__picture {
     background-size: cover;
-    height: 28rem;
+    height: 40rem;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     &-1 {
@@ -69,9 +69,10 @@
     font-weight: 300;
     text-transform: uppercase;
     text-align: right;
+    font-weight: bold;
     color: $color-white;
     position: absolute;
-    top: 14rem;
+    top: 30rem;
     right: 2rem;
   }
 
