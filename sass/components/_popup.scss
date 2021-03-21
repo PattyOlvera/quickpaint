@@ -36,12 +36,15 @@
   }
   &__text {
     font-size: 1.4rem;
-    margin-bottom: 4rem;
+    // margin-bottom: 2rem;
     column-count: 2;
     column-gap: 4rem;
     column-rule: 1px solid $color-grey-dark-2;
     hyphens: auto;
   }
+
+  &-list {
+    color: green;
 
   &:target {
     opacity: 1;

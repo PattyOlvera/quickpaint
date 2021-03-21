@@ -1,0 +1,43 @@
+#modal-eventos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  z-index: 2500;
+}
+
+.modal__window {
+  width: 95%;
+  height: 90%;
+  position: relative;
+  background-color: white;
+  padding: 5rem;
+  box-shadow: 0 1rem 3rem rgba($color-black, 0.4);
+}
+
+.modal__close {
+  font-size: 2rem;
+  color: $color-primary-dark;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 3000;
+}
+
+#modal-eventos:not(:target) {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+
